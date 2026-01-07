@@ -1,0 +1,352 @@
+@import "tailwindcss";
+
+@theme {
+  --color-mf-amber-50: #FFFBEB;
+  --color-mf-amber-100: #FEF3C7;
+  --color-mf-amber-200: #FDE68A;
+  --color-mf-amber-300: #FCD34D;
+  --color-mf-amber-400: #FBBF24;
+  --color-mf-amber-500: #F59E0B;
+  --color-mf-amber-600: #D97706;
+  --color-mf-amber-700: #B45309;
+  --color-mf-amber-800: #92400E;
+  --color-mf-amber-900: #78350F;
+  
+  --color-mf-orange-50: #FFF7ED;
+  --color-mf-orange-100: #FFEDD5;
+  --color-mf-orange-200: #FED7AA;
+  --color-mf-orange-300: #FDBA74;
+  --color-mf-orange-400: #FB923C;
+  --color-mf-orange-500: #F97316;
+  --color-mf-orange-600: #EA580C;
+  --color-mf-orange-700: #C2410C;
+  --color-mf-orange-800: #9A3412;
+  --color-mf-orange-900: #7C2D12;
+  
+  --color-mf-teal-50: #F0FDFA;
+  --color-mf-teal-100: #CCFBF1;
+  --color-mf-teal-200: #99F6E4;
+  --color-mf-teal-300: #5EEAD4;
+  --color-mf-teal-400: #2DD4BF;
+  --color-mf-teal-500: #14B8A6;
+  --color-mf-teal-600: #0D9488;
+  --color-mf-teal-700: #0F766E;
+  --color-mf-teal-800: #115E59;
+  --color-mf-teal-900: #134E4A;
+  
+  --color-mf-indigo-50: #EEF2FF;
+  --color-mf-indigo-100: #E0E7FF;
+  --color-mf-indigo-200: #C7D2FE;
+  --color-mf-indigo-300: #A5B4FC;
+  --color-mf-indigo-400: #818CF8;
+  --color-mf-indigo-500: #6366F1;
+  --color-mf-indigo-600: #4F46E5;
+  --color-mf-indigo-700: #4338CA;
+  --color-mf-indigo-800: #3730A3;
+  --color-mf-indigo-900: #312E81;
+  
+  --color-mf-blue-50: #EFF6FF;
+  --color-mf-blue-100: #DBEAFE;
+  --color-mf-blue-200: #BFDBFE;
+  --color-mf-blue-300: #93C5FD;
+  --color-mf-blue-400: #60A5FA;
+  --color-mf-blue-500: #3B82F6;
+  --color-mf-blue-600: #2563EB;
+  --color-mf-blue-700: #1D4ED8;
+  --color-mf-blue-800: #1E40AF;
+  --color-mf-blue-900: #1E3A8A;
+  
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+  --font-family-display: 'Poppins', system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 font-sans antialiased;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+  
+  * {
+    scroll-margin-top: 80px;
+  }
+}
+
+@layer utilities {
+  .gradient-amber-orange {
+    @apply bg-gradient-to-r from-mf-amber-500 via-mf-orange-500 to-mf-amber-600;
+  }
+  
+  .gradient-teal-indigo {
+    @apply bg-gradient-to-r from-mf-teal-500 via-mf-indigo-500 to-mf-teal-600;
+  }
+  
+  .gradient-blue-indigo {
+    @apply bg-gradient-to-r from-mf-blue-500 via-mf-indigo-500 to-mf-blue-600;
+  }
+  
+  .gradient-rainbow {
+    @apply bg-gradient-to-r from-mf-amber-600 via-mf-orange-600 via-mf-teal-600 via-mf-indigo-600 to-mf-blue-600;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-mf-indigo-600 via-mf-blue-600 to-mf-teal-600;
+  }
+  
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+  
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+  
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  /* Amélioration de la galerie masonry */
+  .gallery-columns {
+    column-gap: 1.5rem;
+  }
+
+  .gallery-item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1rem;
+  }
+
+  /* Centrer les deux dernières images dans la galerie */
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  /* Si il reste 1 ou 2 images, on les centre */
+  .gallery-grid-container:has(.gallery-item:nth-last-child(1):not(:nth-child(4n))) .gallery-grid,
+  .gallery-grid-container:has(.gallery-item:nth-last-child(2):not(:nth-child(4n-1))) .gallery-grid {
+    justify-content: center;
+  }
+
+  /* Centrer spécifiquement les deux dernières images */
+  .gallery-item:nth-last-child(1),
+  .gallery-item:nth-last-child(2) {
+    justify-self: center;
+  }
+
+  /* Si il y a exactement 1 image restante après un multiple de 4 */
+  .gallery-grid-container:has(.gallery-item:nth-last-child(1):nth-child(4n+1)) .gallery-item:nth-last-child(1) {
+    grid-column: 2 / 3;
+  }
+
+  /* Si il y a exactement 2 images restantes après un multiple de 4 */
+  .gallery-grid-container:has(.gallery-item:nth-last-child(2):nth-child(4n-1)) .gallery-item:nth-last-child(2),
+  .gallery-grid-container:has(.gallery-item:nth-last-child(1):nth-child(4n)) .gallery-item:nth-last-child(1) {
+    grid-column: auto;
+  }
+}
+
+/* Swiper Modal Styles */
+.swiper-modal {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* Boutons de navigation professionnels et élégants */
+.swiper-modal .swiper-button-next,
+.swiper-modal .swiper-button-prev {
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.3),
+    0 2px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  margin-top: 0;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  position: absolute !important;
+  z-index: 10;
+  overflow: visible;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.swiper-modal .swiper-button-next {
+  right: 20px !important;
+  left: auto !important;
+}
+
+.swiper-modal .swiper-button-prev {
+  left: 20px !important;
+  right: auto !important;
+}
+
+.swiper-modal .swiper-button-next:hover,
+.swiper-modal .swiper-button-prev:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 4px 12px rgba(0, 0, 0, 0.25),
+    0 0 0 2px rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.swiper-modal .swiper-button-next:active,
+.swiper-modal .swiper-button-prev:active {
+  transform: translateY(-50%) scale(1.02);
+  box-shadow: 
+    0 2px 12px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.swiper-modal .swiper-button-next::after,
+.swiper-modal .swiper-button-prev::after {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  filter: none;
+  z-index: 1;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.swiper-modal .swiper-button-next:hover::after,
+.swiper-modal .swiper-button-prev:hover::after {
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.swiper-modal .swiper-button-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.swiper-modal .swiper-button-disabled:hover {
+  transform: translateY(-50%) scale(1);
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.swiper-modal .swiper-button-disabled::after {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Pagination améliorée */
+.swiper-modal .swiper-pagination-fraction {
+  bottom: 30px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.75) 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 700;
+  backdrop-filter: blur(20px);
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  letter-spacing: 0.5px;
+}
+
+/* Styles pour les slides */
+.swiper-modal .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.swiper-modal .swiper-slide img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.swiper-modal .swiper-slide-active img {
+  transform: scale(1.02);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+}
+
+/* Animation fade améliorée */
+.swiper-modal .swiper-slide {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.swiper-modal .swiper-slide-active {
+  opacity: 1;
+}
+
+/* Responsive - Ajuster les boutons sur mobile */
+@media (max-width: 768px) {
+  .swiper-modal .swiper-button-next,
+  .swiper-modal .swiper-button-prev {
+    width: 44px;
+    height: 44px;
+  }
+
+  .swiper-modal .swiper-button-next {
+    right: 12px !important;
+  }
+
+  .swiper-modal .swiper-button-prev {
+    left: 12px !important;
+  }
+
+  .swiper-modal .swiper-button-next::after,
+  .swiper-modal .swiper-button-prev::after {
+    font-size: 13px;
+  }
+
+  .swiper-modal .swiper-button-next:hover,
+  .swiper-modal .swiper-button-prev:hover {
+    transform: translateY(-50%) scale(1.08);
+  }
+
+  .swiper-modal .swiper-pagination-fraction {
+    bottom: 20px;
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}

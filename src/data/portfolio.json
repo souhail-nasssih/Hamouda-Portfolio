@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "title": "Infographie Corporate - Rapport Annuel",
+    "description": "Création d'une infographie complète pour le rapport annuel d'une entreprise, mettant en valeur les statistiques et les réalisations de l'année.",
+    "category": "Infographie",
+    "tools": ["Photoshop", "Illustrator", "InDesign"],
+    "tags": ["infographic", "data visualization", "corporate"],
+    "image": "/api/placeholder/800/600",
+    "challenge": "Transformer des données complexes en une visualisation claire et engageante pour un public corporate.",
+    "approach": "Utilisation de graphiques vectoriels, palette de couleurs professionnelle et hiérarchie visuelle claire.",
+    "result": "Infographie primée qui a augmenté l'engagement de 40% par rapport aux rapports précédents."
+  },
+  {
+    "id": 2,
+    "title": "Identité Visuelle - Startup Tech",
+    "description": "Développement complet de l'identité visuelle incluant logo, cartes de visite, et guidelines de marque.",
+    "category": "Branding",
+    "tools": ["Illustrator", "Adobe XD", "Photoshop"],
+    "tags": ["branding", "logo", "identity"],
+    "image": "/api/placeholder/800/600",
+    "challenge": "Créer une identité moderne et mémorable qui reflète l'innovation technologique de la startup.",
+    "approach": "Recherche approfondie, création de plusieurs concepts, itération basée sur les retours clients.",
+    "result": "Identité visuelle cohérente déployée sur tous les supports de communication."
+  },
+  {
+    "id": 3,
+    "title": "Campagne Social Media - Événement",
+    "description": "Série de visuels pour une campagne de promotion d'événement sur les réseaux sociaux.",
+    "category": "Social Media",
+    "tools": ["Photoshop", "Illustrator"],
+    "tags": ["social media", "poster", "event"],
+    "image": "/api/placeholder/800/600",
+    "challenge": "Créer des visuels accrocheurs qui génèrent du buzz et augmentent les inscriptions.",
+    "approach": "Design cohérent avec variations pour différents formats de réseaux sociaux, utilisation de couleurs vibrantes.",
+    "result": "Campagne qui a généré 3x plus d'inscriptions que les campagnes précédentes."
+  },
+  {
+    "id": 4,
+    "title": "Brochure Éducative - Santé Publique",
+    "description": "Conception d'une brochure informative sur la santé publique avec infographies et illustrations.",
+    "category": "Brochure",
+    "tools": ["InDesign", "Illustrator", "Photoshop"],
+    "tags": ["brochure", "infographic", "education"],
+    "image": "/api/placeholder/800/600",
+    "challenge": "Rendre des informations médicales complexes accessibles à un large public.",
+    "approach": "Utilisation d'illustrations simples, typographie claire, et mise en page aérée pour faciliter la lecture.",
+    "result": "Brochure distribuée à 10,000 exemplaires avec un taux de compréhension élevé."
+  },
+  {
+    "id": 5,
+    "title": "Affiche Événement - Festival Culturel",
+    "description": "Création d'une affiche événementielle pour un festival culturel avec design audacieux et coloré.",
+    "category": "Poster",
+    "tools": ["Photoshop", "Illustrator"],
+    "tags": ["poster", "event", "cultural"],
+    "image": "/api/placeholder/800/600",
+    "challenge": "Créer une affiche qui capture l'essence multiculturelle du festival et attire l'attention.",
+    "approach": "Fusion d'éléments visuels représentant différentes cultures, palette de couleurs vibrante, typographie expressive.",
+    "result": "Affiche primée qui a été utilisée comme image principale de la campagne marketing."
+  },
+  {
+    "id": 6,
+    "title": "Dashboard Infographique - Analytics",
+    "description": "Visualisation de données analytiques sous forme de dashboard infographique interactif.",
+    "category": "Data Visualization",
+    "tools": ["Adobe XD", "Illustrator", "Photoshop"],
+    "tags": ["data visualization", "dashboard", "analytics"],
+    "image": "/api/placeholder/800/600",
+    "challenge": "Transformer des métriques complexes en visualisations claires et actionnables.",
+    "approach": "Design de composants réutilisables, hiérarchie visuelle claire, utilisation de couleurs pour catégoriser les données.",
+    "result": "Dashboard adopté par l'équipe qui a amélioré la prise de décision basée sur les données."
+  }
+]
+
