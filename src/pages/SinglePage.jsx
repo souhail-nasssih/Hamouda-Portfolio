@@ -47,9 +47,9 @@ const SinglePage = () => {
       achievements: [
         'Production de visuels pour réseaux sociaux',
         'Création d\'infographies pour rapports clients',
-        'Gestion de projets de A à Z',
+        'Gestion de Projets de A à Z',
       ],
-    },
+    }, 
   ];
 
   const contactInfo = [
