@@ -1,7 +1,10 @@
+import { lazy, Suspense } from 'react';
 import { motion } from 'framer-motion';
 import Button from '../components/Button';
 import ArchiveGallery from '../components/ArchiveGallery';
 import SkillBar from '../components/SkillBar';
+
+const HeroBackground3D = lazy(() => import('../components/HeroBackground3D'));
 
 const SinglePage = () => {
 
@@ -15,8 +18,8 @@ const SinglePage = () => {
   const softSkills = [
     'Travail d\'équipe',
     'Organisation',
-    'Communication',
-    'Adaptabilité',
+    'Sens de la communication',
+    'Capacité d\'adaptation',
   ];
 
   const languages = [
@@ -25,50 +28,85 @@ const SinglePage = () => {
     { name: 'Français', level: 'Courant' },
   ];
 
+  const education = [
+    {
+      title: 'Licence de droit privé',
+      period: '2025 – 2026',
+      description: 'Formation universitaire en droit privé.',
+    },
+    {
+      title: 'Certificat Adobe Education Professional',
+      period: '2023 – 2024',
+      description: 'Learning du design — certification professionnelle Adobe.',
+    },
+    {
+      title: 'Diplôme en Graphic Designer',
+      period: '2022 – 2023',
+      description: 'Formation complète en design graphique et outils professionnels.',
+    },
+    {
+      title: 'Baccalauréat option Lettres Modernes',
+      period: '2018 – 2019',
+      description: 'Baccalauréat sciences humaines.',
+    },
+  ];
+
   const experiences = [
     {
       company: 'Action Marketing Plus',
       position: 'Graphic Designer',
-      period: '25/01/2024 - 25/07/2025',
-      location: 'Maroc',
-      description: 'Création de designs graphiques pour des campagnes marketing, développement d\'identités visuelles et production de supports print et digital.',
+      period: '20/01/2025 - 18/06/2026',
+      location: 'Casablanca, Maroc',
+      description: 'Développement d\'identités visuelles et création graphique pour des campagnes marketing.',
       achievements: [
-        'Création de plus de 50 designs pour campagnes marketing',
-        'Développement de 10 identités visuelles complètes',
-        'Collaboration avec une équipe multidisciplinaire',
+        'Développement d\'identités visuelles cohérentes incluant logos et éléments graphiques',
+        'Maîtrise de la typographie, de la couleur et de la mise en page',
+        'Collaboration avec clients et équipes pour comprendre les objectifs du projet',
       ],
     },
     {
-      company: 'Shem\'s Publicité',
+      company: 'Action Marketing Plus — Stage',
+      position: 'Graphic Designer',
+      period: '20/04/2024 - 18/10/2024',
+      location: 'Casablanca, Maroc',
+      description: 'Stage en design graphique : logos, identités de marque et supports print & digital.',
+      achievements: [
+        'Conception de logos, brochures, affiches, sites web et visuels réseaux sociaux',
+        'Utilisation de la typographie, de la couleur et de la mise en page',
+        'Collaboration avec clients et équipes sur les besoins du projet',
+      ],
+    },
+    {
+      company: 'Shem\'s Publicité — Stage',
       position: 'Graphic Designer',
       period: '01/06/2023 - 30/11/2023',
-      location: 'Maroc',
-      description: 'Conception de visuels publicitaires, infographies et supports de communication pour divers clients.',
+      location: 'Casablanca, Maroc',
+      description: 'Stage en conception graphique et supports de communication publicitaire.',
       achievements: [
-        'Production de visuels pour réseaux sociaux',
-        'Création d\'infographies pour rapports clients',
-        'Gestion de Projets de A à Z',
+        'Conception de logos, identités de marque, brochures et affiches',
+        'Développement d\'identités visuelles cohérentes pour les marques',
+        'Collaboration avec clients et équipes pour définir les objectifs du projet',
       ],
-    }, 
+    },
   ];
 
   const contactInfo = [
     {
       icon: '📧',
       label: 'Email',
-      value: 'mohamed.fechtali@example.com',
-      href: 'mailto:mohamed.fechtali@example.com',
+      value: 'hamouda.fechetali@gmail.com',
+      href: 'mailto:hamouda.fechetali@gmail.com',
     },
     {
       icon: '📱',
       label: 'Téléphone',
-      value: '+212702970861',
+      value: '0702970861',
       href: 'tel:+212702970861',
     },
     {
       icon: '📍',
       label: 'Localisation',
-      value: 'Maroc',
+      value: 'Casablanca, Maroc',
       href: null,
     },
   ];
@@ -127,49 +165,10 @@ const SinglePage = () => {
     <div>
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-mf-amber-50/80 via-mf-teal-50/80 to-mf-indigo-50/80 -z-10"></div>
-        
-        <motion.div
-          className="absolute top-20 left-10 w-72 h-72 bg-mf-amber-400 rounded-full mix-blend-multiply filter blur-xl opacity-25"
-          animate={{
-            x: [0, 30, 0],
-            y: [0, -50, 0],
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute top-40 right-10 w-72 h-72 bg-mf-teal-400 rounded-full mix-blend-multiply filter blur-xl opacity-25"
-          animate={{
-            x: [0, -20, 0],
-            y: [0, 20, 0],
-            scale: [1, 0.9, 1],
-          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            delay: 2,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute -bottom-8 left-1/2 w-72 h-72 bg-mf-indigo-400 rounded-full mix-blend-multiply filter blur-xl opacity-25"
-          animate={{
-            x: [0, 20, 0],
-            y: [0, -30, 0],
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            delay: 4,
-            ease: "easeInOut",
-          }}
-        />
+        <div className="absolute inset-0 bg-gradient-to-br from-mf-amber-50/80 via-mf-teal-50/80 to-mf-indigo-50/80 -z-20"></div>
+        <Suspense fallback={null}>
+          <HeroBackground3D />
+        </Suspense>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-10">
           <motion.div
@@ -204,14 +203,14 @@ const SinglePage = () => {
               variants={itemVariants}
               className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-700 mb-4"
             >
-              Infographic & Graphic Designer
+              Graphic Designer
             </motion.h2>
 
             <motion.p
               variants={itemVariants}
               className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8"
             >
-              2 ans d'expérience — Photoshop, Illustrator, InDesign, Adobe XD
+              2 ans d'expérience — Infographiste · Casablanca, Maroc
             </motion.p>
 
             <motion.div
@@ -261,49 +260,37 @@ const SinglePage = () => {
             <motion.div variants={cardVariants}>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Qui suis-je ?</h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Designer graphique spécialisé en infographie avec 2 ans d'expérience dans la création
-                de visualisations de données et d'identités visuelles. Passionné par la transformation
-                de données complexes en designs clairs et engageants.
+                Professionnel dévoué avec 2 ans d'expérience en tant qu'infographiste, compétent en
+                Photoshop et Illustrator. Soucieux de produire des résultats et de favoriser la
+                collaboration au sein de l'équipe, j'excelle dans les environnements dynamiques.
               </p>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Mon objectif est de créer des designs qui non seulement attirent l'attention mais
-                communiquent efficacement le message souhaité. Je combine créativité et méthodologie
-                pour livrer des projets qui dépassent les attentes.
+                Bilingue en anglais et en français, je suis impatient de mettre mon expertise au
+                service de la croissance et du succès d'organisations innovantes.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Bilingue en arabe, anglais et français, je peux travailler avec des clients
-                internationaux et adapter mes designs à différents contextes culturels.
+                Basé à Casablanca, je conçois des identités visuelles, des supports print et digital,
+                et des visuels pour les réseaux sociaux en collaboration étroite avec mes clients.
               </p>
             </motion.div>
 
             <motion.div variants={cardVariants}>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Formation</h2>
               <div className="space-y-6">
-                <motion.div
-                  whileHover={{ scale: 1.02, y: -5 }}
-                  transition={{ duration: 0.3 }}
-                  className="bg-white p-6 rounded-2xl shadow-soft"
-                >
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    Diplôme Graphique Designer
-                  </h3>
-                  <p className="text-gray-600">
-                    Formation complète en design graphique couvrant les principes fondamentaux
-                    et les outils professionnels.
-                  </p>
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.02, y: -5 }}
-                  transition={{ duration: 0.3 }}
-                  className="bg-white p-6 rounded-2xl shadow-soft"
-                >
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    Certification Adobe
-                  </h3>
-                  <p className="text-gray-600">
-                    Certifications officielles Adobe pour Photoshop, Illustrator, InDesign et XD.
-                  </p>
-                </motion.div>
+                {education.map((item) => (
+                  <motion.div
+                    key={item.title}
+                    whileHover={{ scale: 1.02, y: -5 }}
+                    transition={{ duration: 0.3 }}
+                    className="bg-white p-6 rounded-2xl shadow-soft"
+                  >
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
+                      <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
+                      <span className="text-sm font-medium text-mf-indigo-700">{item.period}</span>
+                    </div>
+                    <p className="text-gray-600">{item.description}</p>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           </motion.div>
@@ -417,7 +404,7 @@ const SinglePage = () => {
               Mon <span className="text-gradient">Expérience</span>
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-              2 ans d'expérience professionnelle en design graphique et infographie.
+              2 ans d'expérience professionnelle en design graphique à Casablanca.
             </p>
             <motion.div
               initial={{ width: 0 }}

@@ -27,12 +27,35 @@ const ArchiveGallery = () => {
   // Obtenir toutes les catégories uniques (mémorisé)
   const categories = useMemo(() => ['Tous', ...new Set(archiveImages.map((img) => img.category))], []);
 
-  // Filtrer les images selon la catégorie sélectionnée (mémorisé)
+  // Ordre des groupes pour garder les projets liés côte à côte
+  const groupOrder = useMemo(() => {
+    const seen = new Set();
+    const order = [];
+    archiveImages.forEach((img) => {
+      if (img.group && !seen.has(img.group)) {
+        seen.add(img.group);
+        order.push(img.group);
+      }
+    });
+    return order;
+  }, []);
+
+  // Filtrer par catégorie puis trier par groupe pour regrouper les projets liés
   const filteredImages = useMemo(() => {
-    return selectedCategory === 'Tous'
-      ? archiveImages
-      : archiveImages.filter((img) => img.category === selectedCategory);
-  }, [selectedCategory]);
+    const images =
+      selectedCategory === 'Tous'
+        ? archiveImages
+        : archiveImages.filter((img) => img.category === selectedCategory);
+
+    return [...images].sort((a, b) => {
+      const groupA = a.group ?? a.id;
+      const groupB = b.group ?? b.id;
+      if (groupA !== groupB) {
+        return groupOrder.indexOf(groupA) - groupOrder.indexOf(groupB);
+      }
+      return archiveImages.indexOf(a) - archiveImages.indexOf(b);
+    });
+  }, [selectedCategory, groupOrder]);
 
   // Handlers mémorisés
   const handleCategoryChange = useCallback((category) => {

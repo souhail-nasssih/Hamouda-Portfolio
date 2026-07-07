@@ -31,7 +31,7 @@ const Footer = () => {
               Mohamed Fechtali
             </h3>
             <p className="text-gray-400 mb-4">
-              Designer d'infographies créatif, transformant des données complexes en visualisations engageantes.
+              Graphic Designer basé à Casablanca — identités visuelles, print et digital.
             </p>
             <div className="flex space-x-4">
               {footerLinks.social.map((social) => (
