@@ -10,6 +10,17 @@ const archiveImages = [
   { id: 'event-lily-billboard', title: 'LILY — Billboard', category: 'Event', group: 'lily', src: new URL('../../Archive/1764780882836.JPEG', import.meta.url).href },
   { id: 'event-lily-gold', title: 'LILY — Logo doré', category: 'Event', group: 'lily', src: new URL('../../Archive/1764780862857.JPEG', import.meta.url).href },
 
+  // ── Lanacom — Campaigns (imported from public assets) ─────────────────────
+  { id: 'lanacom-projet', title: 'Lanacom — Projet', category: 'Poster', group: 'lanacom', src: '/assets/lanacom/lanacom-projet.png' },
+  { id: 'lanacom-post-4', title: 'Lanacom — Post 4', category: 'Poster', group: 'lanacom', src: '/assets/lanacom/POST-4-.png' },
+  { id: 'lanacom-post-5', title: 'Lanacom — Post 5', category: 'Poster', group: 'lanacom', src: '/assets/lanacom/POST-5-.png' },
+  { id: 'lanacom-store-1', title: 'Lanacom — Store 1', category: 'Poster', group: 'lanacom', src: '/assets/lanacom/التجميل-POST-STORE-1.png' },
+  { id: 'lanacom-store-2', title: 'Lanacom — Store 2', category: 'Poster', group: 'lanacom', src: '/assets/lanacom/التجميل-POST-STORE-2.png' },
+  { id: 'lanacom-store-3', title: 'Lanacom — Store 3', category: 'Poster', group: 'lanacom', src: '/assets/lanacom/التجميل-POST-STORE-3.png' },
+  { id: 'lanacom-store-6', title: 'Lanacom — Store 6', category: 'Poster', group: 'lanacom', src: '/assets/lanacom/التجميل-POST-STORE-6.png' },
+  { id: 'lanacom-store-7', title: 'Lanacom — Store 7', category: 'Poster', group: 'lanacom', src: '/assets/lanacom/التجميل-POST-STORE-7.png' },
+
+
   // ── The City Run — Tanger ─────────────────────────────────────────────────
   { id: 'tanger-poster', title: 'Tanger Run — Affiche', category: 'Poster', group: 'tanger-run', src: new URL('../../Archive/Tanger-Poster.JPEG', import.meta.url).href },
   { id: 'tanger-new', title: 'Tanger Run — Affiche 2024', category: 'Poster', group: 'tanger-run', src: new URL('../../Archive/tanger-new.JPEG', import.meta.url).href },

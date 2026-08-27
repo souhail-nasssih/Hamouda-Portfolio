@@ -71,5 +71,150 @@
     "approach": "Design de composants réutilisables, hiérarchie visuelle claire, utilisation de couleurs pour catégoriser les données.",
     "result": "Dashboard adopté par l'équipe qui a amélioré la prise de décision basée sur les données."
   }
+  ,
+  {
+    "id": 7,
+    "title": "Lanacom Campaign 1",
+    "description": "Visuel Lanacom - campagne promotionnelle.",
+    "category": "Advertising",
+    "tools": ["Photoshop"],
+    "tags": ["lanacom", "advertising"],
+    "image": "/assets/lanacom/lanacom-projet.png",
+    "challenge": "Intégrer des visuels produits et lifestyle.",
+    "approach": "Retouche colorimétrique et composition centrée sur le produit.",
+    "result": "Visuel utilisé pour la promotion multi-plateforme."
+  },
+  {
+    "id": 8,
+    "title": "Lanacom Campaign 2",
+    "description": "Visuel Lanacom - campagne produit.",
+    "category": "Advertising",
+    "tools": ["Photoshop"],
+    "tags": ["lanacom", "product"],
+    "image": "/assets/lanacom/POST-4-.png",
+    "challenge": "Mettre en valeur le produit dans un style lifestyle.",
+    "approach": "Recadrage serré et mise en avant du sérum.",
+    "result": "Augmentation de la visibilité produit sur les réseaux sociaux."
+  },
+  {
+    "id": 9,
+    "title": "Lanacom Campaign 3",
+    "description": "Visuel Lanacom - offre promotionnelle.",
+    "category": "Advertising",
+    "tools": ["Photoshop"],
+    "tags": ["lanacom", "promo"],
+    "image": "/assets/lanacom/POST-5-.png",
+    "challenge": "Associer une offre commerciale à un visuel élégant.",
+    "approach": "Typographie intégrée et éléments de marque.",
+    "result": "Meilleure conversion durant la période promotionnelle."
+  },
+  {
+    "id": 10,
+    "title": "Lanacom Campaign 4",
+    "description": "Visuel Lanacom - lifestyle.",
+    "category": "Advertising",
+    "tools": ["Photoshop"],
+    "tags": ["lanacom", "lifestyle"],
+    "image": "/assets/lanacom/التجميل-POST-STORE-1.png",
+    "challenge": "Conserver une esthétique cohérente sur plusieurs formats.",
+    "approach": "Dégradés harmonisés et retouches de peau.",
+    "result": "Visuels déployés en affichage et digital."
+  },
+  {
+    "id": 11,
+    "title": "Lanacom Campaign 5",
+    "description": "Visuel Lanacom - gros plan produit.",
+    "category": "Advertising",
+    "tools": ["Photoshop"],
+    "tags": ["lanacom", "closeup"],
+    "image": "/assets/lanacom/التجميل-POST-STORE-2.png",
+    "challenge": "Mettre en avant le packaging et la texture.",
+    "approach": "Éclairage dirigé et composition minimaliste.",
+    "result": "Image principale pour la fiche produit."
+  },
+  {
+    "id": 12,
+    "title": "Lanacom Campaign 6",
+    "description": "Visuel Lanacom - packaging et modèle.",
+    "category": "Advertising",
+    "tools": ["Photoshop"],
+    "tags": ["lanacom", "packshot"],
+    "image": "/assets/lanacom/التجميل-POST-STORE-3.png",
+    "challenge": "Associer modèle et packaging de façon élégante.",
+    "approach": "Composition symétrique et reflets soignés.",
+    "result": "Visuel utilisé pour PLV et réseaux."
+  },
+  {
+    "id": 13,
+    "title": "Lanacom Campaign 7",
+    "description": "Visuel Lanacom - campagne esthétique.",
+    "category": "Advertising",
+    "tools": ["Photoshop"],
+    "tags": ["lanacom", "beauty"],
+    "image": "/assets/lanacom/التجميل-POST-STORE-6.png",
+    "challenge": "Créer une émotion visuelle autour du produit.",
+    "approach": "Palette de couleurs chaudes et lumière douce.",
+    "result": "Bonne réception par l'audience cible."
+  },
+  {
+    "id": 14,
+    "title": "Lanacom Campaign 8",
+    "description": "Visuel Lanacom - campagne portrait.",
+    "category": "Advertising",
+    "tools": ["Photoshop"],
+    "tags": ["lanacom", "portrait"],
+    "image": "/assets/lanacom/التجميل-POST-STORE-7.png",
+    "challenge": "Harmoniser portrait et produit.",
+    "approach": "Retouche fine et composition élégante.",
+    "result": "Visuel utilisé en story et formats verticaux."
+  },
+  {
+    "id": 15,
+    "title": "Lanacom Campaign 9",
+    "description": "Visuel Lanacom - hero image.",
+    "category": "Advertising",
+    "tools": ["Photoshop"],
+    "tags": ["lanacom", "hero"],
+    "image": "/assets/lanacom/lanacom-projet.png",
+    "challenge": "Créer un visuel impactant pour la page d'accueil.",
+    "approach": "Composition centrée et typographie forte.",
+    "result": "Visuel adopté pour le hero du site."
+  },
+  {
+    "id": 16,
+    "title": "Lanacom Campaign 10",
+    "description": "Visuel Lanacom - produit et accessoire.",
+    "category": "Advertising",
+    "tools": ["Photoshop"],
+    "tags": ["lanacom", "product"],
+    "image": "/assets/lanacom/POST-4-.png",
+    "challenge": "Associer accessoires et produit de façon organique.",
+    "approach": "Mise en scène soignée et éclairage sculptural.",
+    "result": "Visuel pour catalogue produit."
+  },
+  {
+    "id": 17,
+    "title": "Lanacom Campaign 11",
+    "description": "Visuel Lanacom - campagne glamour.",
+    "category": "Advertising",
+    "tools": ["Photoshop"],
+    "tags": ["lanacom", "glamour"],
+    "image": "/assets/lanacom/POST-5-.png",
+    "challenge": "Transmettre un sentiment de luxe et d'élégance.",
+    "approach": "Contraste élevé et accents métalliques.",
+    "result": "Visuel utilisé pour branding premium."
+  },
+  {
+    "id": 18,
+    "title": "Lanacom Campaign 12",
+    "description": "Visuel Lanacom - packshot final.",
+    "category": "Advertising",
+    "tools": ["Photoshop"],
+    "tags": ["lanacom", "packshot"],
+    "image": "/assets/lanacom/التجميل-POST-STORE-1.png",
+    "challenge": "Obtenir un rendu produit net et attractif.",
+    "approach": "Post-production précise et rendu texturé.",
+    "result": "Visuel final pour supports imprimés et digitaux."
+  }
 ]
 

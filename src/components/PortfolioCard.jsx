@@ -30,8 +30,12 @@ const PortfolioCard = ({ project }) => {
       >
         {/* Image Container */}
         <div className="relative h-64 overflow-hidden bg-gradient-to-br from-mf-amber-100 to-mf-indigo-100">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-6xl text-gray-300">📊</div>
+          <div className="absolute inset-0">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-full object-cover"
+            />
           </div>
           {/* Category Badge */}
           <div className="absolute top-4 left-4">
